@@ -1,23 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#3E4EB8">
     <title>PWA</title>
+    <link rel="stylesheet" type="text/css" href="base.css">
     <link rel="stylesheet" type="text/css" href="app.css">
     <!-- TODO add manifest here -->
     <link rel="manifest" href="manifest.json">
-    <!-- Add to home screen for Safari on iOS -->
+    <!-- TODO Add to home screen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Weather PWA">
     <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
     <meta name="msapplication-TileColor" content="#2F3BA2">
+    <script type="text/javascript">
+        (function (_window) {
+            var docEl = _window.document.documentElement,
+                resizeEvt = 'orientationchange' in _window ? 'orientationchange' : 'resize';
+
+            function s() {
+                var clientWidth = docEl.clientWidth > 800 ? 800 : docEl.clientWidth;
+                docEl.style.fontSize = 100 * (clientWidth / 375) + 'px';
+            }
+
+            _window.addEventListener(resizeEvt, s, false);
+            s();
+        })(window);
+    </script>
 </head>
 <body>
-ok 0 1 2 3 4 5
+<pre>
+长歌行
+
+作者：汉乐府
+
+青青园中葵，朝露待日晞。
+阳春布德泽，万物生光辉。
+常恐秋节至，焜黄华叶衰。
+百川东到海，何时复西归？
+少壮不努力，老大徒伤悲。
+
+短歌行
+
+作者：曹操
+
+对酒当歌，人生几何！
+譬如朝露，去日苦多。
+慨当以慷，忧思难忘。
+何以解忧？唯有杜康。
+青青子衿，悠悠我心。
+但为君故，沉吟至今。
+呦呦鹿鸣，食野之苹。
+我有嘉宾，鼓瑟吹笙。
+明明如月，何时可掇？
+忧从中来，不可断绝。
+越陌度阡，枉用相存。
+契阔谈，心念旧恩。
+月明星稀，乌鹊南飞。
+绕树三匝，何枝可依？
+山不厌高，海不厌深。
+周公吐哺，天下归心。
+</pre>
 <script>
     window.onload = function () {
         var script = document.createElement('script');
