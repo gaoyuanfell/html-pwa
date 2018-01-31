@@ -1,4 +1,4 @@
-var version = '1.0.0.3.0';
+var version = '1.0.0.3.1';
 
 if('PushManager' in window){
     new Promise(function (resolve, reject) {
